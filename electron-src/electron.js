@@ -13,14 +13,24 @@ function createWindow() {
   });
 
   // and load the index.html of the app.
+  /*
+  if (isDev) {
+    win.loadURL("http://localhost:3000");
+  } else {
+    app.on("ready", () => {
+      // win.loadURL(`file:///${__dirname}/../index.html`);
+      win.loadURL(`file://${path.join(__dirname, "../build/index.html")}`);
+    });
+  }
+  */
   win.loadURL(
     isDev
       ? "http://localhost:3000"
-      : `file://${path.join("__dirname", "../build/index.html")}`
+      : `file://${path.join(__dirname, "../build/index.html")}`
   );
 
   // Open the DevTools.
-  win.webContents.openDevTools();
+  // win.webContents.openDevTools();
 }
 
 // This method will be called when Electron has finished
