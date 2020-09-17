@@ -14,12 +14,12 @@ function createWindow() {
 
   // and load the index.html of the app.
   /*
-  if (isDev) {
+  if (!isDev) {
     win.loadURL("http://localhost:3000");
   } else {
     app.on("ready", () => {
       // win.loadURL(`file:///${__dirname}/../index.html`);
-      win.loadURL(`file://${path.join(__dirname, "../build/index.html")}`);
+      win.loadURL(`file://${path.join(__dirname, "build/index.html")}`);
     });
   }
   */
